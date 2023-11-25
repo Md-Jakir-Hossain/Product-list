@@ -34,6 +34,7 @@
 
 .wrapper .form-container .btn {
   width: 100%;
+  background: #0a8817;
 }
 
 .wrapper .view-container {
@@ -58,10 +59,11 @@ tr.product-table-row {
 }
 input.form-control {
   display: flex;
-  width: 100%;
+  width: 97%;
   height: 30px;
   padding: 5px;
 }
 .btn {
   height: 30px;
+  background: rgb(248, 42, 42);
 }
