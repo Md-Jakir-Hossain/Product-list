@@ -27,14 +27,16 @@
 
 .wrapper .form-container {
   width: 500px;
-  background-color: #e4e4e4;
+  background-color: #0cf2e4;
   margin: 20px auto;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .wrapper .form-container .btn {
   width: 100%;
   background: #0a8817;
+  border: none;
 }
 
 .wrapper .view-container {
