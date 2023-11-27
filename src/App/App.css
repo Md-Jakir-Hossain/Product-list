@@ -6,7 +6,7 @@
 .wrapper {
   overflow-x: hidden;
   overflow-y: auto;
-  background: #dcdada;
+  background: #068776;
 }
 
 .wrapper h1 {
@@ -36,8 +36,9 @@
 
 .wrapper .form-container .btn {
   width: 100%;
-  background: #0a8817;
+  background: #03a713;
   border: none;
+  color: #fff;
 }
 
 .wrapper .view-container {
@@ -67,8 +68,16 @@ select {
   height: 30px;
   padding: 5px;
   font-size: 1rem;
+  border-radius: 5px;
 }
 .btn {
   height: 30px;
   background: rgb(248, 42, 42);
+  border-radius: 5px;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
 }

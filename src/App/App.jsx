@@ -44,11 +44,14 @@ export const App = () => {
 
       <div className="main">
         <div className="form-container">
-          <select>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-          </select>
+          <label htmlFor="">
+            Color :
+            <select>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+            </select>
+          </label>
           <form onSubmit={submitBtn} className="form-group">
             <label>Product Id :</label>
             <input
