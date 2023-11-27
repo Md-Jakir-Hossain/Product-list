@@ -6,6 +6,7 @@
 .wrapper {
   overflow-x: hidden;
   overflow-y: auto;
+  background: #dcdada;
 }
 
 .wrapper h1 {
@@ -40,7 +41,7 @@
 }
 
 .wrapper .view-container {
-  width: 600px;
+  width: 650px;
   background-color: #e4e4e4;
   margin: 20px auto;
   padding: 20px;
@@ -59,11 +60,13 @@ tbody {
 tr.product-table-row {
   text-align: center;
 }
-input.form-control {
+input.form-control,
+select {
   display: flex;
   width: 97%;
   height: 30px;
   padding: 5px;
+  font-size: 1rem;
 }
 .btn {
   height: 30px;

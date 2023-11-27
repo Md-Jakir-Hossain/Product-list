@@ -9,11 +9,13 @@ export const App = () => {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(0);
   const [price, setPrice] = useState(0);
+  const [description, setDescription] = useState("");
   const clear = () => {
     setId("");
     setName("");
     setQuantity("");
     setPrice("");
+    setDescription("");
   };
 
   const submitBtn = (e) => {
@@ -24,6 +26,7 @@ export const App = () => {
       name,
       quantity,
       price,
+      description,
     };
     setItems([...items, item]);
     clear();
@@ -41,6 +44,11 @@ export const App = () => {
 
       <div className="main">
         <div className="form-container">
+          <select>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
           <form onSubmit={submitBtn} className="form-group">
             <label>Product Id :</label>
             <input
@@ -78,12 +86,21 @@ export const App = () => {
               required
             ></input>
             <br></br>
+            <label>Description :</label>
+            <input
+              type="text"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              className="form-control"
+              required
+            ></input>
+            <br></br>
             <button
               onClick={() => setItems}
               type="submit"
               className="btn btn-success btn-md"
             >
-              ADD
+              Add Product
             </button>
           </form>
         </div>
@@ -98,6 +115,7 @@ export const App = () => {
                     <th>Name</th>
                     <th>Quantity</th>
                     <th>Price</th>
+                    <th>Description</th>
                   </tr>
                 </thead>
 
