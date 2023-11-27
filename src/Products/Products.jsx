@@ -1,7 +1,7 @@
 import React from "react";
 import { RiChatDeleteFill } from "react-icons/ri";
-const Products = ({ item, del }) => {
-  const { id, name, quantity, price, description } = item;
+const Products = ({ product, del }) => {
+  const { id, name, quantity, price, description } = product;
   return (
     <>
       <tbody>

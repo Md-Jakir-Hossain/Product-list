@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Products from "../Products/Products";
 import "./App.css";
 
 export const App = () => {
-  const [items, setItems] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const [id, setId] = useState(0);
   const [name, setName] = useState("");
@@ -21,22 +21,25 @@ export const App = () => {
   const submitBtn = (e) => {
     console.log(e);
     e.preventDefault();
-    const item = {
+    const product = {
       id,
       name,
       quantity,
       price,
       description,
     };
-    setItems([...items, item]);
+    setProducts([...products, product]);
     clear();
   };
 
-  const removeItem = (id) => {
+  const removeProduct = (id) => {
     console.log(id);
-    const remove = items.filter((item) => item.id !== id);
-    setItems(remove);
+    const remove = products.filter((product) => product.id !== id);
+    setProducts(remove);
   };
+  useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(products));
+  }, [products]);
 
   return (
     <div className="wrapper">
@@ -99,7 +102,7 @@ export const App = () => {
             ></input>
             <br></br>
             <button
-              onClick={() => setItems}
+              onClick={() => setProducts}
               type="submit"
               className="btn btn-success btn-md"
             >
@@ -109,7 +112,7 @@ export const App = () => {
         </div>
 
         <div className="view-container">
-          {items.length > 0 && (
+          {products.length > 0 && (
             <>
               <table className="table">
                 <thead>
@@ -119,16 +122,17 @@ export const App = () => {
                     <th>Quantity</th>
                     <th>Price</th>
                     <th>Description</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
 
-                {items.map((item) => (
-                  <Products item={item} del={removeItem} />
+                {products.map((product) => (
+                  <Products product={product} del={removeProduct} />
                 ))}
               </table>
 
               <button
-                onClick={() => setItems([])}
+                onClick={() => setProducts([])}
                 className="btn btn-danger btn-md"
               >
                 Remove All
