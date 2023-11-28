@@ -28,7 +28,7 @@
 
 .wrapper .form-container {
   width: 500px;
-  background-color: #0cf2e4;
+  background-color: antiquewhite;
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
@@ -83,4 +83,7 @@ td {
   border-collapse: collapse;
   border: 3px solid rgb(183, 170, 183);
   margin-bottom: 10px;
+}
+h1 {
+  background: #e8ebeccf;
 }
